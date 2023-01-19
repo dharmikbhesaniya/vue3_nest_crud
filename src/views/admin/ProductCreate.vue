@@ -21,7 +21,7 @@ export default {
         const router = useRouter();
 
         const submit = async () => {
-            await fetch("http://localhost:3000/products", {
+            await fetch("http://localhost:3000/products/", {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({

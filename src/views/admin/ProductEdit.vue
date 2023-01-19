@@ -34,7 +34,7 @@ export default {
         });
 
         const submit = async () => {
-            await fetch(`http://localhost:3000/products/${route.params.id}`, {
+            await fetch(`http://localhost:3000/products/${route.params.id}/`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",

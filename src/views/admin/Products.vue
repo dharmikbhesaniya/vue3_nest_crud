@@ -47,16 +47,16 @@ export default {
         const products = ref([]);
 
         onMounted(async () => {
-            const res = await fetch("http://localhost:3000/products");
+            const res = await fetch("http://localhost:3000/products/");
             products.value = await res.json();
         });
 
         const del = async (id) => {
-            await fetch(`http://localhost:3000/products/${id}`, {
+            await fetch(`http://localhost:3000/products/${id}/`, {
                 method: "delete",
             });
 
-            const res = await fetch("http://localhost:3000/products");
+            const res = await fetch("http://localhost:3000/products/");
             products.value = await res.json();
         };
 
